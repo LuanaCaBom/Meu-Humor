@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, Button, TextInput, Pressable } from 'react-native';
-import Emoji from 'react-native-emoji';
 
 export default function MoodSelectionScreen({ navigation }: any) {
 

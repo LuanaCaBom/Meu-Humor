@@ -14,9 +14,10 @@ export default function StackRoutes(){
         <NavigationContainer>
             <Navigator>
 
-                <Screen
+                <Screen 
                     name='pag-login'
                     component={Login}
+                    options={{title: 'Meu Humor  -  Login'}}
                 />
                 <Screen
                     name='pag-mood'
