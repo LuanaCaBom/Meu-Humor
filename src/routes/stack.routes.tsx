@@ -8,6 +8,7 @@ const {Screen, Navigator} = createStackNavigator();
 
 import Login from '../screens/LoginScreen'
 import Mood from '../screens/MoodSelectionScreen'
+import Result from '../screens/ResultScreen'
 
 export default function StackRoutes(){
     return (
@@ -22,6 +23,12 @@ export default function StackRoutes(){
                 <Screen
                     name='pag-mood'
                     component={Mood}
+                    options={{title: 'Meu Humor  -  Seleção do Mood'}}
+                />
+                <Screen
+                    name='pag-result'
+                    component={Result}
+                    options={{title: 'Meu Humor  -  Resultado'}}
                 />
 
             </Navigator>

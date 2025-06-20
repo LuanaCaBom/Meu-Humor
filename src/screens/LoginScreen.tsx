@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, Pressable, TextInput, Alert, Image } from 'react-native';
-import GifPlayer from 'react-native-gif-player';
+import { View, Text, Pressable, TextInput, Alert } from 'react-native';
+import { Image } from 'expo-image';
 
 export default function LoginScreen({ navigation }: any) {
     const [email, setEmail] = useState("");
@@ -34,7 +34,9 @@ export default function LoginScreen({ navigation }: any) {
     }
 
     return (
-        <View style={{flex: 1, alignItems:'center', paddingTop: 100, backgroundColor: '#67baff54'}}>
+        <View style={{flex: 1, alignItems:'center', paddingTop: 70, backgroundColor: '#67baff54'}}>
+            <Text style={{fontSize: 25, fontWeight: 'bold', paddingBottom: 40}}>Meu Humor</Text>
+
             <Text style={{fontSize: 25, fontWeight: 'bold', paddingBottom: 30}}>Seja bem-vindo(a) !!!</Text>
 
             <View style={{backgroundColor: '#F7F08B', borderWidth: 1, borderRadius: 10, marginBottom: 30}}>
@@ -61,7 +63,11 @@ export default function LoginScreen({ navigation }: any) {
                 <Text style={{fontSize: 23, color: 'white'}}>Entrar</Text>
             </Pressable>
 
-            <GifPlayer source={ require('../../assets/emoji.gif') }/>
+            <Image 
+                style={{ width: 450, height: 200, margin: 5}}
+                source={ require('../../assets/escolha.gif')}
+                contentFit="cover"   
+            />
         </View>
     )
 }
