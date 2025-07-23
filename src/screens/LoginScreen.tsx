@@ -1,6 +1,9 @@
+//Grupo: Aline Silvério Mendes e Luana de Carvalho Bomfim
+
 import React, { useState } from 'react';
 import { View, Text, Pressable, TextInput, Alert } from 'react-native';
 import { Image } from 'expo-image';
+import {styles} from '../components/Style'
 
 export default function LoginScreen({ navigation }: any) {
 
@@ -37,66 +40,42 @@ export default function LoginScreen({ navigation }: any) {
     }
 
     return (
-        <View style={{flex: 1, alignItems:'center', paddingTop: 70, backgroundColor: '#67baff54'}}>
+        <View style={styles.viewLogin}>
 
-            <Text style={{fontSize: 25, fontWeight: 'bold', paddingBottom: 40}}>Meu Humor</Text>
+            <Text style={styles.titulo}>Meu Humor</Text>
 
-            <Text style={{fontSize: 25, fontWeight: 'bold', paddingBottom: 30}}>Seja bem-vindo(a) !!!</Text>
+            <Text style={styles.titulo}>Seja bem-vindo(a) !!!</Text>
 
-            <View style={{backgroundColor: '#F7F08B', borderWidth: 1, borderRadius: 10, marginBottom: 30}}>
+            <View style={styles.viewCaixa}>
 
-                <View 
-                    style={{flexDirection: 'row', 
-                            justifyContent: 'flex-end', 
-                            alignItems: 'center', 
-                            margin: 10, 
-                            marginTop: 30
-                        }}
-                >
+                <View style={styles.viewInCaixa}>
 
-                    <Text style={{fontSize: 21, fontWeight: 'bold'}}>Email: </Text>
+                    <Text style={styles.textoLogin}>Email: </Text>
 
-                    <TextInput 
-                        style={{backgroundColor: 'white', borderWidth: 0.2, borderRadius: 10, height: 41, width: 220}}
-                        value={email}
-                        onChangeText={setEmail}
-                    />
+                    <TextInput style={styles.inputTexto} value={email} onChangeText={setEmail}/>
 
                 </View>
 
-                <View style={{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', margin: 10}}>
+                <View style={styles.viewInCaixa}>
 
-                    <Text style={{fontSize: 21, fontWeight: 'bold'}}>Senha: </Text>
+                    <Text style={styles.textoLogin}>Senha: </Text>
 
-                    <TextInput
-                        style={{backgroundColor: 'white', borderWidth: 0.2, borderRadius: 10, height: 41, width: 220}}
-                        value={senha}
-                        onChangeText={setSenha}
-                    />
+                    <TextInput style={styles.inputTexto} value={senha} onChangeText={setSenha}/>
 
                 </View>
 
-            <Text style={{color: 'red', fontWeight: 'bold', paddingLeft: 12, paddingBottom: 12}}>{texto}</Text>
+            <Text style={styles.textoAlerta}>{texto}</Text>
 
             </View>
 
-            <Pressable 
-                onPress={campos} 
-                style={{borderWidth: 2, 
-                        borderRadius: 40, 
-                        padding: 7, 
-                        width: 100, 
-                        alignItems: 'center', 
-                        backgroundColor: '#dd1313'
-                    }}
-            >
+            <Pressable onPress={campos} style={styles.btnEntrar}>
 
-                <Text style={{fontSize: 23, color: 'white', textShadowColor: 'black', textShadowRadius: 4}}>Entrar</Text>
+                <Text style={styles.textoBtn}>Entrar</Text>
 
             </Pressable>
 
             <Image 
-                style={{ width: 450, height: 200, margin: 5}}
+                style={styles.gifHumores}
                 source={ require('../../assets/escolha.gif')}
                 contentFit="cover"   
             />

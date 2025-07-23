@@ -1,5 +1,8 @@
+//Grupo: Aline Silvério Mendes e Luana de Carvalho Bomfim
+
 import React from 'react';
 import { View, Text, Pressable, Image } from 'react-native';
+import {styles} from '../components/Style'
 
 export default function MoodSelectionScreen({ route, navigation }: any) {
 
@@ -73,18 +76,18 @@ export default function MoodSelectionScreen({ route, navigation }: any) {
     }
 
     return (
-        <View style={{backgroundColor: '#67baff54', flex: 1, alignItems: 'center', paddingTop: 40}}>
+        <View style={styles.viewSelecao}>
 
-            <Text style={{fontSize: 25, fontWeight: 'bold', paddingBottom: 40}}>Meu Humor</Text>
+            <Text style={styles.titulo}>Meu Humor</Text>
 
-            <Text style={{fontSize: 23, fontWeight: 'bold'}}>Como você está se sentindo hoje?</Text>
+            <Text style={styles.textoPergunta}>Como você está se sentindo hoje?</Text>
 
-            <Text style={{fontSize: 20, paddingBottom: 20, paddingTop: 5, color: '#a3a3a3'}}>Clique em um emoji</Text>
+            <Text style={styles.textoInstrucao}>Clique em um emoji</Text>
 
             <Pressable onPress={() => resultado(1)}>
 
                 <Image
-                    style={{ width: 110, height: 110, margin: 20}} 
+                    style={styles.imgEmoji} 
                     source={ require('../../assets/feliz.png')}
                 />
 
@@ -93,7 +96,7 @@ export default function MoodSelectionScreen({ route, navigation }: any) {
             <Pressable onPress={() => resultado(2)}>
 
                 <Image
-                    style={{ width: 110, height: 110, margin: 20}} 
+                    style={styles.imgEmoji} 
                     source={ require('../../assets/neutro.png')}
                 />
 
@@ -102,7 +105,7 @@ export default function MoodSelectionScreen({ route, navigation }: any) {
             <Pressable onPress={() => resultado(3)}>
 
                 <Image
-                    style={{ width: 110, height: 110, margin: 20}} 
+                    style={styles.imgEmoji} 
                     source={ require('../../assets/triste.png')}
                 />
 

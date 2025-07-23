@@ -1,3 +1,5 @@
+//Grupo: Aline Silvério Mendes e Luana de Carvalho Bomfim
+
 //importação do "gerente" de navegação baseado em pilha
 import { createStackNavigator } from "@react-navigation/stack"
 //importação do NavigationContainer que será um componente visual
